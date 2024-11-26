@@ -21,7 +21,7 @@ function createImageGrid() {
                 <div class="col-md-4 col-sm-4 mb-4 mt-2 ml-0 p-0 card-film" style="flex: 0 0 auto; padding: 5px; overflow: hidden;">
                     <div class="card" style="margin: 0; width: 100%; ">
                         <img src="${immagine.immagine}" class="card-img-top" style="height: 300px;" alt="${immagine.titolo}" style="width: 100%; object-fit: cover;">
-                     <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;background-color: rgba(255, 255, 255, 0.347);color: darkgoldenrod">
+                     <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;;color: darkgoldenrod">
                         <h5 class="card-title text-center" style="flex-grow: 1; text-align: center;">${immagine.titolo}</h5>
                         <button type="button" class="btn btn-warning w-1 m-1" style="width: 25%;">Acquista</button>
                     </div>
