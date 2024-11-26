@@ -1,16 +1,24 @@
+
+
 body {
-    background-image: url('../Assets/sfondo.avif'); /* Cambia il percorso con quello corretto */
-    background-size: cover; /* Per adattare l'immagine allo schermo */
-    background-position: center; /* Per centrare l'immagine */
-    background-repeat: no-repeat; /* Per evitare che si ripeta */
+    background: linear-gradient(90deg, #000000, #191818, #111);
+    background-size: 200% 200%;
+    animation: neonGlow 10s linear infinite;
+    height: 100vh;
+    color: #fff;
 }
+
+
 
 .home{
     width: 1400px;
     margin: 0 auto;
+    
 }
 
-.slider {margin:0}
+.slider {margin:0;
+    border: 1px solid #fff;
+}
 
 #imageGrid {
     display: flex;
@@ -19,58 +27,76 @@ body {
     justify-content: flex-start;
     padding: 0;
     height: 400px;
-    
-    
+    color: rgba(255, 255, 255, 0.347);
 }
 
 .card-film {box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.608);
     transition: transform 0.4s;
     cursor: pointer;
+    border-radius: 15px;
     overflow: hidden;
 }
+.card-body {background-color: rgba(255, 255, 255, 0.347);color: darkgoldenrod}
 
 .card-film:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
     transition: transform 0.4s;
 }
 
+.locandineFilm {
+    border: 3px solid #dce236; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(255, 255, 0, 0.3);
+    padding: 20px; 
+    transition: all 0.3s ease; 
+}
+
+.locandineFilm:hover {
+    box-shadow: 0 6px 20px rgba(255, 255, 0, 0.5); 
+    border-color: #ddf542; }
+
+
 .img-locandina {
-    box-shadow: 7px 7px 10px 7px rgba(157, 135, 9, 0.452);
-    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease; 
+    margin-left: 40px;
+    box-shadow: 0 0 10px rgba(157, 135, 9, 0.6); 
+    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
     position: relative;
     cursor: pointer;
+
 }
 
 .img-locandina:hover {
     transform: scale(1.05) translateY(-5px); 
-    filter: brightness(1.0) contrast(1.2); 
-    box-shadow: 0px 0px 40px 15px rgba(255, 241, 173, 0.8); 
+    filter: brightness(1.1) contrast(1.3);  
+    box-shadow: 0px 0px 7px 7px rgba(0, 255, 255, 0.37), 0px 0px 30px 15px rgba(255, 0, 255, 0.616), 0px 0px 40px 20px rgba(0, 255, 0, 0.8); 
 }
 
-
+/* Effetto neon più accentuato */
 .img-locandina::after {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle, rgba(255, 241, 173, 0.6) 0%, rgba(0, 0, 0, 0) 70%);
+    transform: translate(-40%, -40%);
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.356) 0%, rgba(0, 0, 0, 0) 60%); 
     opacity: 0;
-    border-radius: 50%;
+    border-radius: 60%;
     transition: opacity 0.4s ease;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 .img-locandina:hover::after {
     opacity: 1; 
 }
 
+
+
+
 .boxMenu{
     display: flex;
     justify-content: space-between;
-    background-color: black;
     color: white;
     width: 100%;
     
@@ -96,33 +122,17 @@ body {
         display: flex;
         margin-right: 40px;
 
-        
-
-        button{
-            background-color: rgb(59, 58, 58);
-            margin-top: 35px;
-            padding: 0;
-            width: 80px;
-            height: 80px;
-        }
     }
 }
 
 
 .menu1{
-    background-color:  rgba(0, 0, 0, 0.784);
+    
     display: flex;
     justify-content: space-between;
     width: 100%;
 
-    button{
-        font: 1em sans-serif;
-        background-color: rgb(59, 58, 58);
-        color: darkgoldenrod;
-        height: 40px; 
-        width: 140px;
-        margin-left: 40px;
-    }
+
 
     ul{
         display: flex;
@@ -140,22 +150,17 @@ body {
     }
 }
 
-.banner{
-    height: 300px;
-    width: 100%;
-    background-color: grey;
-}
+
 
 
 
 main{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.784);
+
 
     p{
         width: 1000px;
         text-align: center;
-        margin-left: 180px ;
         color: darkgoldenrod;
         font: 1em sans-serif;
         padding-top: 10px;

@@ -21,7 +21,7 @@ function createImageGrid() {
                 <div class="col-md-4 col-sm-4 mb-4 mt-2 ml-0 p-0 card-film" style="flex: 0 0 auto; padding: 5px; overflow: hidden;">
                     <div class="card" style="margin: 0; width: 100%; ">
                         <img src="${immagine.immagine}" class="card-img-top" style="height: 300px;" alt="${immagine.titolo}" style="width: 100%; object-fit: cover;">
-                     <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
+                     <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;background-color: rgba(255, 255, 255, 0.347);color: darkgoldenrod">
                         <h5 class="card-title text-center" style="flex-grow: 1; text-align: center;">${immagine.titolo}</h5>
                         <button type="button" class="btn btn-warning w-1 m-1" style="width: 25%;">Acquista</button>
                     </div>
@@ -167,22 +167,25 @@ interface Film {
              
 
               filmCard.innerHTML = `
-                                <div class="locandineFilm card-body m-2" style="display: flex; align-items: center;">
-                    <div class="img-locandina m-3 p-2 ml-4"  style="width:15%; height:7%" >
-                        <img src="${film.immagineLocandina}" alt="${film.titolo}" style="width: 100%;">
-                    </div>
-                    <div style="width: 40%; padding-left: 10px;">
-                        <p><strong>Anno:</strong> ${film.anno}</p>
-                        <p><strong>Genere:</strong> ${film.genere}</p>
-                        <p><strong>Regia:</strong> ${film.regia}</p>
-                        <p><small>Durata: ${film.durata} min</small></p>
-                        <p><small><strong>Cast:</strong> ${film.cast}</small></p>
-                        <div style="margin-top: 10px;" >
-                            <button class="btn btn-warning orari"> ${orari.orario1}</button>
-                            <button class="btn btn-warning orari">${orari.orario2}</button>
-                            <button class="btn btn-warning orari">${orari.orario3}</button>
-                            <button class="btn btn-warning orari">${orari.orario4}</button>
-                            <button class="btn btn-warning orari">${orari.orario5}</button>
+                                <div class="locandineFilm card-body m-4" style="display: flex; align-items: center;border: 1px solid white;">
+                                <div class="img-locandina m-5 p-2"  style="width:10%; height:7%;" >
+                                    <img src="${film.immagineLocandina}" alt="${film.titolo}" style="width: 100%;">
+                                </div>
+                    <div style="width: 40%;padding-left: 10px;display: flex;flex-direction: column;justify-content: start;">
+                        <div class="text m-2" style="text-align: left;margin-left:20px">
+                            <p style="text-align: left;"><strong>${film.titolo}</strong></p>
+                            <p style="text-align: left;"><strong>Anno:</strong> ${film.anno}</p>
+                            <p style="text-align: left;"><strong>Genere:</strong> ${film.genere}</p>
+                            <p style="text-align: left;"><strong>Regia:</strong> ${film.regia}</p>
+                            <p style="text-align: left;"><small>Durata: ${film.durata} min</small></p>
+                            <p style="text-align: left;"><small><strong>Cast:</strong> ${film.cast}</small></p>
+                        </div>
+                      <div class="m-2" >
+                            <button class="btn btn-warning orari m-2"> ${orari.orario1}</button>
+                            <button class="btn btn-warning orari m-2">${orari.orario2}</button>
+                            <button class="btn btn-warning orari m-2">${orari.orario3}</button>
+                            <button class="btn btn-warning orari m-2">${orari.orario4}</button>
+                            <button class="btn btn-warning orari m-2">${orari.orario5}</button>
                         </div>
                     </div>
                 </div>
