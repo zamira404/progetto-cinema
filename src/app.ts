@@ -12,6 +12,8 @@ const immagini: Immagini[] = [
     { titolo: "Santa Marinelli", immagine: "assets/Santa-Marinelli.jpg" }
 ];
 
+
+// funzione che manda le immagini a schermo.
 function createImageGrid() {
     const imageGrid = document.getElementById('imageGrid');
 
@@ -32,11 +34,10 @@ function createImageGrid() {
         });
     }
 }
-
-
 // Chiamata della funzione per costruire la griglia di immagini
 createImageGrid();
 
+// card dei film.
 interface Film {
     titolo: string;       
     anno: number;         
